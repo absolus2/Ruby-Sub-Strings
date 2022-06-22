@@ -4,7 +4,7 @@ def substring(word, dictionary)
   h = Hash.new
   word.split(" ").each do |element|
     dictionary.each do |value|
-      if element.include?(value)
+      if element.downcase.include?(value)
         h[value] ||= 0
         h[value] += 1
         h 
